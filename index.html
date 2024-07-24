@@ -138,6 +138,26 @@
             <p class="text-muted">Copyright Ⓒ 2023 All rights reserved. 请勿上传违反中国法律的图片，违者后果自负。
                 本程序基于Telegraph，开源于GitHub <a href="https://github.com/x-dr/telegraph-Image"
                     target="_blank">telegraph-Image</a></p>
+                <div id="runtime_span" style="text-align:center;"></div>
+                <!-- 倒计时脚本 -->
+    <script type="text/javascript">
+        function show_runtime() {
+            window.setTimeout(show_runtime, 1000);
+            var X = new Date("1/1/2024 14:00:00");
+            var Y = new Date();
+            var T = (Y.getTime() - X.getTime());
+            var M = 24 * 60 * 60 * 1000;
+            var a = T / M;
+            var A = Math.floor(a);
+            var b = (a - A) * 24;
+            var B = Math.floor(b);
+            var c = (b - B) * 60;
+            var C = Math.floor(c);
+            var D = Math.floor((c - C) * 60);
+            document.getElementById("runtime_span").innerHTML = "本小站稳定运行: " + A + "天" + B + "小时" + C + "分" + D + "秒";
+        }
+        show_runtime();
+    </script>
         </div>
     </footer>
     <div id="lightbox-overlay" class="lightbox-overlay">
